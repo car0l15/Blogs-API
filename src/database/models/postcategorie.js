@@ -1,5 +1,5 @@
 const PostCategoriesSchema = (sequelize, DataTypes) => {
-  const PostCategoriesTable = sequelize.define("PostCategories", {
+  const PostCategoriesTable = sequelize.define("PostCategorie", {
     postId: DataTypes.NUMBER,
     categoryId: DataTypes.NUMBER
   });

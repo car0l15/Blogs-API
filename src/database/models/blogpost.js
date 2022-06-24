@@ -1,5 +1,5 @@
 const BlogPostsSchema = (sequelize, DataTypes) => {
-  const BlogPostsTable = sequelize.define("BlogPosts", {
+  const BlogPostsTable = sequelize.define("BlogPost", {
     title: DataTypes.STRING,
     content: DataTypes.STRING,
     published: DataTypes.DATE,
