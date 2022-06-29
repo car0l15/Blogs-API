@@ -3,16 +3,17 @@ const BlogPostsSchema = (sequelize, DataTypes) => {
     title: DataTypes.STRING,
     content: DataTypes.STRING,
     published: DataTypes.DATE,
-    updated: DataTypes.DATE
+    updated: DataTypes.DATE,
+    userId: { type: DataTypes.INTEGER, foreignKey: true},
   });
 
   BlogPostsTable.associate = (models) => {
-    BlogPostsTable.belongsTo(models.Users, { foreignKey: "userId", as: "user" }) //não sei se o as pode dar algum problema pro avaliador
+    BlogPostsTable.belongsTo(models.User, { foreignKey: "userId", as: "user" }) //não sei se o as pode dar algum problema pro avaliador
   }
 
-  BlogPostsTable.associate = (models) => {
-    BlogPostsTable.hasMany(models.PostCategories, { foreignKey: "postId" })
-  }
+  // BlogPostsTable.associate = (models) => {
+  //   BlogPostsTable.hasMany(models.PostCategories, { foreignKey: "postId" })
+  // }
 
   return BlogPostsTable;
 }

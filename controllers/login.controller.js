@@ -3,10 +3,10 @@ const serviceLogin = require('../service/service.login');
 
 const loginRouter = express.Router();
 
-loginRouter.post('/', (req, res) => {
+loginRouter.post('/', async (req, res) => {
     const { email, password } = req.body;
 
-    const result = serviceLogin.postUser(email, password);
+    const result = await serviceLogin.postUser(email, password);
     res.status(200).json(result);
 });
 
