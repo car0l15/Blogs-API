@@ -9,7 +9,7 @@ const PostCategoriesSchema = (sequelize, DataTypes) => {
       type: DataTypes.INTEGER,
       primaryKey: true,
       foreignKey: true,
-    }
+    },
   });
 
   PostCategoriesTable.associate = (models) => {
@@ -31,4 +31,3 @@ const PostCategoriesSchema = (sequelize, DataTypes) => {
 }
 
 module.exports = PostCategoriesSchema;
-

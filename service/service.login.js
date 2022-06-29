@@ -9,7 +9,6 @@ const postUser = async ({ email, password }) => {
   }
 
    const user = await User.findOne({
-    // atrributes: []
    where: { email, password },
    });
 
@@ -18,7 +17,6 @@ const postUser = async ({ email, password }) => {
    throw error;
    }
 
-   // gerar o token
   //  console.log(user.dataValues, 'user dataValue');
    const token = generationToken(user.dataValues);
   //  console.log(token, 'token');
