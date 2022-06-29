@@ -2,14 +2,15 @@ const { User } = require('../src/database/models');
 const { generationToken } = require('../utils/JWTToken');
 
 const postUser = async ({ email, password }) => {
+  // console.log
   if (!email || !password) {
     const errorMsg = { status: 400, message: 'Some required fields are missing' };
-    throw errorMsg; // verificar se a camada de middleware pega certinho
+    throw errorMsg;
   }
 
    const user = await User.findOne({
     // atrributes: []
-    where: { email, password },
+   where: { email, password },
    });
 
    if (!user) {
@@ -18,7 +19,9 @@ const postUser = async ({ email, password }) => {
    }
 
    // gerar o token
+  //  console.log(user.dataValues, 'user dataValue');
    const token = generationToken(user.dataValues);
+  //  console.log(token, 'token');
    return token;
 };
 
