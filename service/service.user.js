@@ -1,22 +1,25 @@
 const { User } = require('../src/database/models');
 const { generationToken } = require('../utils/JWTToken');
 
-const postUser = async ({ displayName, email, password, image }) => {
- const newUser = await User.create(
-    displayName, email, password, image,
- );
+const createUser = async ({ displayName, email, password, image }) => {
+ const user = await User.findOne({
+ where: { email },
+ });
 
-  const checkEmail = await User.findOne({ where: { email } });
-
-  if (checkEmail) {
+ if (user) {
     const error = { status: 409, message: 'User already registered' };
     throw error;
-  }
- const token = generationToken(newUser.dataValues);
- console.log('token here', token);
- return token;
+ }
+
+  const newUser = await User.create({
+    displayName, email, password, image,
+  });
+
+  const token = generationToken(newUser.dataValues);
+ console.log(token, 'here');
+  return token;
 };
 
 module.exports = {
-    postUser,
+    createUser,
 };
