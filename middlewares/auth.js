@@ -7,15 +7,18 @@ const authentication = async (req, res, next) => {
         return res.status(401).json({ message: 'Token not found' });
     }
 
-    const payload = await authenticateToken(token);
-   try {
-    res.locals.payload = payload;
-    next();
-   } catch (e) {
-      return res.status(401).json({ message: 'Expired or invalid token' });
-   }
+    // const payload = await authenticateToken(token);
 
-    next();
+   try {
+    const payload = await authenticateToken(token);
+    if (payload.error) {
+        return res.status(401).json({ message: 'Expired or invalid token' });  
+    }
+    res.locals.payload = payload;
+   return next();
+   } catch (e) {
+      return res.status(401).json({ message: e.message });
+   }
 };
 
 module.exports = authentication;
