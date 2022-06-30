@@ -1,7 +1,7 @@
 const { User } = require('../src/database/models');
 const { generationToken } = require('../utils/JWTToken');
 
-const postUser = async ({ email, password }) => {
+const Login = async ({ email, password }) => {
   // console.log
   if (!email || !password) {
     const errorMsg = { status: 400, message: 'Some required fields are missing' };
@@ -24,5 +24,5 @@ const postUser = async ({ email, password }) => {
 };
 
 module.exports = {
-    postUser,
+    Login,
 };

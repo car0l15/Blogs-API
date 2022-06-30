@@ -18,7 +18,7 @@ const BlogPostsSchema = (sequelize, DataTypes) => {
 
   // BlogPostsTable.associate = (models) => {
   //   BlogPostsTable.hasMany(models.PostCategories, { foreignKey: "postId" })
-  // }
+  // } o monitor falou que não era necessário o hasMany neste caso
 
   return BlogPostsTable;
 }

@@ -7,7 +7,7 @@ loginRouter.post('/', async (req, res) => {
     try {
         const { email, password } = req.body;
 
-        const result = await serviceLogin.postUser({ email, password });
+        const result = await serviceLogin.Login({ email, password });
 
         res.status(200).json({ token: result });
     } catch (error) {
