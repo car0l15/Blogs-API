@@ -15,4 +15,10 @@ userRouter.post('/', middleware.emailValidation, middleware.JoiValidation,
  }
 });
 
+userRouter.get('/', middleware.auth,
+async (req, res) => {
+   const users = await serviceUser.getUsers();
+   return res.status(200).json(users);
+});
+
 module.exports = userRouter;

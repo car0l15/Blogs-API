@@ -16,10 +16,19 @@ const createUser = async ({ displayName, email, password, image }) => {
   });
 
   const token = generationToken(newUser.dataValues);
- console.log(token, 'here');
+//  console.log(token, 'here');
   return token;
+};
+
+const getUsers = async () => {
+  const users = await User.findAll({
+        attributes: ['id', 'displayName', 'email', 'image'],
+    });
+
+  return users;
 };
 
 module.exports = {
     createUser,
+    getUsers,
 };
