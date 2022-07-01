@@ -9,9 +9,9 @@ userRouter.post('/', middleware.emailValidation, middleware.JoiValidation,
  try {
     const { displayName, email, password, image } = req.body;
     const result = await serviceUser.createUser({ displayName, email, password, image });
-    res.status(201).json({ token: result });
+   return res.status(201).json({ token: result });
  } catch (error) {
-    res.status(error.status || 500).json({ message: error.message });
+   return res.status(error.status || 500).json({ message: error.message });
  }
 });
 
