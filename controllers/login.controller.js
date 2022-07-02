@@ -9,9 +9,9 @@ loginRouter.post('/', async (req, res) => {
 
         const result = await serviceLogin.Login({ email, password });
 
-        res.status(200).json({ token: result });
+       return res.status(200).json({ token: result });
     } catch (error) {
-     res.status(error.status || 500).json({ message: error.message });
+    return res.status(error.status || 500).json({ message: error.message });
     }
 });
 
