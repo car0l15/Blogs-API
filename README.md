@@ -6,8 +6,8 @@ Esta é uma API express com camadas MSC e arquitetura Rest e Restful.
 e  diversas outras tecnologias como Nodemon, Sequelize, Sequelize-CLI, 
 mysql2, JOI, JWT, entre outros.
 
-O objetivo é criar um API que simula um blog post, as rotas tem
-verificações/middlewares para que sejam realizadas logins e outras 
+O objetivo é criar um API que simula um blog post com login, posts, usuários. As rotas 
+tem verificações/middlewares para que sejam realizadas logins e outras 
 funcionalidades do blog fictício, veja essas verificações no código ou 
 testando a chamada da API.
 A utilização do JWT(Json Web Tokens) também protege as rotas da aplicação e 
