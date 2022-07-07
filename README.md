@@ -18,9 +18,9 @@ request de qualquer uma das rotas e consumir a aplicação.
 
 ## Testes
 
-Por sua complexidade e por ser uma escola, a Trybe precisa saber se seus alunos conseguiram cumprir todos os requesitos 
+Pela complexidade do projeto e por ser uma escola, a Trybe precisa saber se seus alunos conseguiram cumprir todos os requesitos 
 propostos neste projeto pela mesma. Por isso, ressalto que os testes foram feitos por pessoas desenvolvedoras da Trybe
-e o direito intelectual é o dela.
+e o direito intelectual é todo dela.
 
 ## Clone
 
