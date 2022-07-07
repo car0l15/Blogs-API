@@ -16,7 +16,7 @@ os dados sensíveis da mesma.
 Verifique os arquivos com atenção e sinta-se à vontada para fazer o
 request de qualquer uma das rotas e consumir a aplicação.
 
-## TESTES 
+## Testes
 
 Por sua complexidade e por ser uma escola, a Trybe precisa saber se seus alunos conseguiram cumprir todos os requesitos 
 propostos neste projeto pela mesma. Por isso, ressalto que os testes foram feitos por pessoas desenvolvedoras da Trybe
