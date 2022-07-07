@@ -14,7 +14,7 @@ A utilização do JWT(Json Web Tokens) também protege as rotas da aplicação e
 os dados sensíveis da mesma. 
 
 Verifique os arquivos com atenção e sinta-se à vontada para fazer o
-request de qualquer uma das rotas e consumir a aplicação.
+request de qualquer uma das rotas e consumir a aplicação por completa
 
 ## Testes
 
