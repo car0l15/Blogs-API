@@ -1,8 +1,8 @@
 ## Sobre o Projeto
 
 Esta é uma API express com camadas MSC e arquitetura Rest e Restful.
-A aplicação é dividida Model, Service e Controller. 
-Foram usados para a implementação da mesma diversos pacotes node
+ A aplicação é dividida Model, Service e Controller. 
+ Foram usados para a implementação da mesma diversos pacotes node
 e  diversas outras tecnologias como Nodemon, Sequelize, Sequelize-CLI, 
 mysql2, JOI, JWT, entre outros.
 
