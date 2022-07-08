@@ -24,7 +24,7 @@ e o direito intelectual é todo dela.
 
 ## Clone
 
-Para ter este código em sua máquina basta ir ao seu terminal do seu ambiente e inserir o comando:
+Para ter este código em sua máquina basta ir ao terminal do seu ambiente e inserir o comando:
 
 - git clone git@github.com:car0l15/Blogs-API.git
 - cd Blogs-API
